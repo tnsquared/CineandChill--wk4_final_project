@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine&Chill</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="apps.js" defer></script>
+    <script src="https://kit.fontawesome.com/eb22379432.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="nav__container">
+                <figure>
+                    <img class="logo" src="./assets.C&C/cine-chill-logo-color.png" alt="">
+                </figure>
+                <ul class="nav__links">
+                    <li>
+                        <a href="#" class="nav__link link__hover-effect link__hover-effect--brown">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link link__hover-effect link__hover-effect--brown">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link btn">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search__wrapper">
+                <h1>Let's Chill and Watch a Movie</h1>
+                <div class="input__wrap">
+                    <input type="text" placeholder="Search Movie Title or Genre">
+                    <div class="search__icon">
+                        <i class="fas fa-ticket"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </nav>
+
+        <section id="movies">
+            <div class="loading__bar">
+                <div class="loading__bar--track"></div>
+                <div class="loading__bar--fill"></div>
+                <div class="loading__bar--buffer"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="results__wrapper">
+                        <h1 class="title">
+                            Trending Now
+                        </h1>
+                        <div class="moovie__filter">
+                            <select name="sort" id="sort">
+                                <option value disabled selected>Sort</option>
+                                <option value="NEW_TO_OLD"> New to Old</option>
+                                <option value="OLD_TO_NEW"> Old to New</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="movie__results">
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/SpiderManAcrossSpiderVerse.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Spider-Man: Across The Spider-Verse</h2>
+                            <p class="movie__year"> 03 June 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/AsteroidCity.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Asteroid City</h2>
+                            <p class="movie__year"> 15 June 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/GardiansOfTheGalaxyVol3.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Gardians of the Galaxy: Volume 3</h2>
+                            <p class="movie__year"> 05 May 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/PastLives.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Past Lives</h2>
+                            <p class="movie__year"> 23 June 2023 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
