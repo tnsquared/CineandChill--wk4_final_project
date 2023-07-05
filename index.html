@@ -30,7 +30,7 @@
             <div class="search__wrapper">
                 <h1>Let's Chill and Watch a Movie</h1>
                 <div class="input__wrap">
-                    <input type="text" placeholder="Search Movie Title or Genre">
+                    <input type="text" placeholder="Search by Movie Title" onchange="onSearchChange(event)">
                     <div class="search__icon">
                         <i class="fas fa-ticket"></i>
                     </div>
@@ -49,10 +49,10 @@
                 <div class="row">
                     <div class="results__wrapper">
                         <h1 class="title">
-                            Trending Now
+                            Trending Now:
                         </h1>
-                        <div class="moovie__filter">
-                            <select name="sort" id="sort">
+                        <div class="movie__filter">
+                            <select id="sort" onchange="sortMovieYear(event)">
                                 <option value disabled selected>Sort</option>
                                 <option value="NEW_TO_OLD"> New to Old</option>
                                 <option value="OLD_TO_NEW"> Old to New</option>
@@ -87,6 +87,34 @@
                             </figure>
                             <h2 class="movie__title">Past Lives</h2>
                             <p class="movie__year"> 23 June 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/Elemental2.0.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Elemental</h2>
+                            <p class="movie__year"> 16 June 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/Thelittlemermaid.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">The Little Mermaid</h2>
+                            <p class="movie__year"> 26 May 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/FastX.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">Fast X</h2>
+                            <p class="movie__year"> 19 May 2023 </p>
+                        </div>
+                        <div class="movie">
+                            <figure class="movie__cover--wrapper">
+                                <img class="movie__cover" src="./assets.C&C/John4Wick.jpg" alt="">
+                            </figure>
+                            <h2 class="movie__title">John Wick: Chapter 4</h2>
+                            <p class="movie__year"> 24 March 2023 </p>
                         </div>
                     </div>
                 </div>
