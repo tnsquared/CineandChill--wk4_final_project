@@ -61,7 +61,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin-top: -20px;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav__links {
@@ -133,6 +133,7 @@ nav {
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
+    z-index: 100;
 }
 
 h1 {
@@ -167,9 +168,14 @@ input {
     max-width: 800px;
     height: 60px;
     font-size: 20px;
+    font-weight: 500;
     padding-left: 20px;
     border: none;
     color: #c56E33;
+}
+
+input:active {
+    border-color: #c56E33;
 }
 
 .search__icon {
@@ -193,8 +199,8 @@ input {
     transform: scale(0.8);
 }
 
-/* .overlay {
-    background-image: url(https://garden.spoonflower.com/c/14048179/p/f/m/mDqOLP4aY9TRjSoKCoyxWQkjIAXXnQqii--9CwiULT1A1kTjmhLVLJE/Movie%20night%20%2F%2F%20normal%20scale%20%2F%2F%20white%20background%20yellow%20neon%20red%20teal%20and%20coral%20film%20and%20cinema%20motifs.jpg);
+.overlay {
+    background-image: url(https://www.braintreegames.com/cdn/shop/products/movie-buff-nostalgic-collage-easy-fun-colorful-nice-memories-old-puzzle_512x366.jpg?v=1632993244);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -206,7 +212,18 @@ input {
     bottom: 0;
     right: 0;
     z-index: 1;
-} */
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dfcbb9ca;
+    pointer-events: none;
+}
 
 /*
 
@@ -244,9 +261,9 @@ MOVIES
     color: #c56E33;
 }
 
-/* #sort {
+#sort {
     display: none;
-} */
+}
 
 select {
     background-color: #c56E33;
@@ -268,6 +285,38 @@ select {
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.movies__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    position: absolute;
+    color: #D9BCA9;
+    left: 0;
+    right: 0;
+}
+
+.movies__loading--spinner {
+    display: none !important;
+}
+
+.movies__loading .movies__loading--spinner {
+    display: block !important;
+}
+
+.fa-spinner {
+    animation: rotate 700ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .movie {
@@ -302,3 +351,30 @@ select {
     color: #D9BCA9;
 }
 
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: #240401;
+}
+
+.row__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright{
+    color: #D9BCA9;
+    margin-top: 10px;
+}
+
+.database {
+    color: #D9BCA9;
+    margin-top: 10px;
+    font-size: 12px;
+}

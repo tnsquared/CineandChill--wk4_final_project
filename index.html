@@ -17,10 +17,10 @@
                 </figure>
                 <ul class="nav__links">
                     <li>
-                        <a href="#" class="nav__link link__hover-effect link__hover-effect--brown">Home</a>
+                        <a href="." class="nav__link link__hover-effect link__hover-effect--brown">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="nav__link link__hover-effect link__hover-effect--brown">Movies</a>
+                        <a href="." class="nav__link link__hover-effect link__hover-effect--brown">Movies</a>
                     </li>
                     <li>
                         <a href="#" class="nav__link btn">LOGIN</a>
@@ -40,11 +40,6 @@
         </nav>
 
         <section id="movies">
-            <div class="loading__bar">
-                <div class="loading__bar--track"></div>
-                <div class="loading__bar--fill"></div>
-                <div class="loading__bar--buffer"></div>
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="results__wrapper">
@@ -58,6 +53,9 @@
                                 <option value="OLD_TO_NEW"> Old to New</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="loading">
+                        <i class="fas fa-spinner movies__loading--spinner"></i>
                     </div>
                     <div class="movie__results">
                         <div class="movie">
@@ -120,6 +118,20 @@
                 </div>
             </div>
         </section>
+
+        <footer>
+            <div class="container">
+                <div class="row row__footer">
+                    <a href="#">
+                        <figure class="logo">
+                            <img src="assets.C&C/cine-chill-logo-color.png" alt="">
+                        </figure>
+                    </a>
+                    <div class="copyright">Copyright &copy; 2023 Cine&Chill</div>
+                    <div class="database">Database via OMDb API</div>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

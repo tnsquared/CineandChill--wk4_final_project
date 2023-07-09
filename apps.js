@@ -1,12 +1,29 @@
 // API (movie title): "https://www.omdbapi.com/?apikey=87c5d2f1&s=love"
 
 const movieResultsEl = document.querySelector(" .movie__results")
+const searchTitleEl = document.querySelector(" .title")
+const loadingSpinEl = document.querySelector(" .loading")
+const sortEL = document.querySelector("#sort")
 
 async function renderMovies (sort) {
+
+    setTimeout(() => {        
+        loadingSpinEl.classList += ' movies__loading';
+        }, 400)
+
+    movieResultsEl.style.visibility='hidden';
+
     const movieTitles= await fetch (`https://www.omdbapi.com/?apikey=87c5d2f1&s=${word}`);
     const movieTitlesData = await movieTitles.json();
     const movieTitlesArray = movieTitlesData.Search.slice(0,8);
-    movieResultsEl.innerHTML = movieTitlesArray.map((movie) => movieHTML(movie)).join("");
+
+    setTimeout(() => {
+        movieResultsEl.style.visibility='visible';
+        movieResultsEl.innerHTML = movieTitlesArray.map((movie) => movieHTML(movie)).join("");
+        searchTitleEl.innerHTML = `Results for: ${word}`;
+        sortEL.style.display='flex';
+        loadingSpinEl.classList.remove('movies__loading');
+    }, 1500);
 
     if (sort === "NEW_TO_OLD") {
         movieTitlesArray.sort ((a, b) => b.Year - a.Year)
