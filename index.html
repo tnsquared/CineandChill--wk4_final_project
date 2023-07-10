@@ -26,6 +26,25 @@
                         <a href="#" class="nav__link btn">LOGIN</a>
                     </li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="." class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Movies</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link btn btn__menu--login" onclick="closeMenu()">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="search__wrapper">
                 <h1>Let's Chill and Watch a Movie</h1>

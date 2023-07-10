@@ -123,6 +123,75 @@ nav {
     color: #551E19;
 }
 
+/*Nav Menu Bar*/
+
+.btn__menu{
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    text-align: center;
+    color: #551E19;
+    display: none;
+    transition: all 300ms ease;
+}
+
+.btn__menu:hover {
+    color: #c56E33;
+    cursor: pointer;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #D9BCA9;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #240401;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 30px 0;
+}
+
+.menu__link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #c56E33;
+}
+
+
+
 .search__wrapper {
     margin: 0 auto;
     width: 100%;
@@ -133,7 +202,7 @@ nav {
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
-    z-index: 100;
+    z-index: 90;
 }
 
 h1 {
@@ -377,4 +446,65 @@ footer {
     color: #D9BCA9;
     margin-top: 10px;
     font-size: 12px;
+}
+
+
+/* MQ*/
+
+@media (max-width: 1024px){
+    .nav__container {
+        padding: 0 20px;
+    }
+    
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+}
+
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 38px;
+    }
+    
+    .input__wrap {
+        max-width: 550px;
+    }
+
+    .movie{
+        width: 33%;
+    }
+}
+
+/*Small phones, large phones*/
+
+@media (max-width: 550px) {
+    .nav__container{
+        padding: 0 8px;
+    }
+    
+    h1{
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 4px;
+    }
+
+    .input__wrap{
+        max-width: 360px;
+    }
+
+    .movie{
+        width: 50%;
+    }
+
+    .results__wrapper {
+        flex-direction: column;
+    }
 }

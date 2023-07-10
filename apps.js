@@ -23,7 +23,7 @@ async function renderMovies (sort) {
         searchTitleEl.innerHTML = `Results for: ${word}`;
         sortEL.style.display='flex';
         loadingSpinEl.classList.remove('movies__loading');
-    }, 1500);
+    }, 1200);
 
     if (sort === "NEW_TO_OLD") {
         movieTitlesArray.sort ((a, b) => b.Year - a.Year)
@@ -53,4 +53,12 @@ function movieHTML(movie) {
 
 function sortMovieYear(event) {
     renderMovies(event.target.value)
+}
+
+function openMenu() {
+    document.body.classList += " menu--open"
+}
+
+function closeMenu() {
+    document.body.classList.remove('menu--open')
 }
